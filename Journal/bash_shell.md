@@ -44,3 +44,15 @@ python ok -q python-basics -u
 ```bash
 python ok --local
 ```
+
+7. lab01中提到的一些
+
+The best way to open an interactive terminal to investigate a failing test for question XXXXX in assignment labxx
+```bash
+python3 ok -q XXXXX -i
+```
+
+The best way to look at an environment diagram to investigate a failing test for question XXXXX in assignment labxx
+```shell script
+python3 ok -q XXXXX --trace
+```
