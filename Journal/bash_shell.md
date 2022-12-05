@@ -35,9 +35,11 @@ __pycache__/  lab00.ok  lab00.py  ok  tests/
 mv lab LAB
 ```
 
-5. 运行 ok 格式的试卷，在终端中填写答案
+5. 运行 ok 格式的试卷，在终端中填写答案（其中XXXX是试卷的名字，可以cd进tests文件夹查看XXXX.py文件的名字）
+
+注意在 labXX 文件夹中运行 ok（从 tests 中退出来）
 ```bash
-python ok -q python-basics -u
+python ok -q XXXX -u --local
 ```
 
 6. 运行 ok 文件以自动检测代码结果
@@ -45,7 +47,7 @@ python ok -q python-basics -u
 python ok --local
 ```
 
-7. lab01中提到的一些
+7. lab01中提到的一些（其中的XXXXX是 labxx.py 中要测试函数的名字）
 
 The best way to open an interactive terminal to investigate a failing test for question XXXXX in assignment labxx
 ```bash
