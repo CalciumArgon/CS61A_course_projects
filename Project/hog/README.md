@@ -1,10 +1,40 @@
 ## hog 程序框架
 
-1. `dice.py`
+1. Powershell 测试/提交命令
+
+一共 12 个 Problem，每个 Problem 有理解性测试和代码测试两部分
+
+理解性测试，针对规则的理解，自己运算相应函数的输出结果
+```powershell
+python ok -q 01 -u --local
+```
+
+代码测试（不加 `-i` 也可以），不加 `-q 0X` 就是全部代码测试
+```powershell
+python ok -q 01 -i --local
+python ok --local
+```
+
+查看测试分数
+```powershell
+python ok --score --local
+```
+
+运行 `run_experiments()` 函数，里面可以进行测试，这样可以不用 `if __name__ == "__main__"` 来写
+```powershell
+python3 hog.py -r
+```
+
+运行 GUI 网页模拟，可以双人对战，也可以单人与自己写的 final_strategy 对战
+```powershell
+python hog_gui.py
+```
+
+2. `dice.py`
 
 提供了正常的骰子 `six_sided` 和 按照指定结果依次循环输出的测试骰子 `make_test_dice(*outcomes)`
 
-2. `hog.py`
+3. `hog.py`
 
     * Phase 1: Simulator
 
