@@ -74,14 +74,18 @@ def repeated(f, n):
     ...       ['For', 'While'])
     True
     """
-    if n == 0:
-        return lambda x: x
-    if n == 1:
-        return f
-    temp = repeated(f, n//2)
-    if n % 2 == 0:
-        return compose1(temp, temp)
-    else:
-        return compose1(compose1(f, temp), temp)
-# repeat = repeated(lambda x: x**2, 7)
-# print(repeat(5))
+    def evaluate(i, acc):
+        if i <= n:
+            return evaluate(i + 1, f(acc))
+        return acc
+    return lambda x: evaluate(1, x)
+
+    # if n == 0:
+    #     return lambda x: x
+    # if n == 1:
+    #     return f
+    # temp = repeated(f, n//2)
+    # if n % 2 == 0:
+    #     return compose1(temp, temp)
+    # else:
+    #     return compose1(compose1(f, temp), temp)
