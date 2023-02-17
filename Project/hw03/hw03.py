@@ -192,7 +192,9 @@ def make_anonymous_factorial():
     # The following expressions need '=' assignment, and still rely on the name 'factorial'
     # factorial = lambda x: 1 if x == 1 else x * factorial(x - 1)
     # factorial = lambda x: 1 if x == 1 else mul(x, factorial(sub(x, 1)))
-    return "YOUR CODE HERE"
+    
+    # 正确的思路应该为: 需要递归时再调用一次make_anonymous_factorial()重新生成递归函数
+    return lambda x: 1 if x==1 else x * factorial()(x-1)
 
 
 def print_move(origin, destination):
