@@ -193,8 +193,12 @@ def make_anonymous_factorial():
     # factorial = lambda x: 1 if x == 1 else x * factorial(x - 1)
     # factorial = lambda x: 1 if x == 1 else mul(x, factorial(sub(x, 1)))
     
-    # 正确的思路应该为: 需要递归时再调用一次make_anonymous_factorial()重新生成递归函数
-    return lambda x: 1 if x==1 else x * factorial()(x-1)
+    # 需要递归时, 就再调用一次make_anonymous_factorial()重新生成递归函数
+    # But the following expressions need 'recursion' which is banned
+    # return lambda n: reduce(lambda x, y: x * y, range(1, n+1), 1)
+
+    # 正确的做法: Y-combinator 使 lambda 函数也可以调用
+    return lambda n: (lambda f: f(f, n))(lambda g, x: 1 if x == 0 else x * g(g, x-1))
 
 
 def print_move(origin, destination):
