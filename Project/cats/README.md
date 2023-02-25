@@ -1,5 +1,13 @@
 ## CATS 程序框架和细节处理
 
+运行以 `XXX` `XXXX` 为主题的段落 typing test
+
+或在网页 `GUI` 中运行测试，可包含自动纠错
+```shell
+python cats.py -t XXX， XXXX
+python gui.py --local
+```
+
 #### 框架
 
 * Phase 1：对段落主题的选择，准确率统计，速度统计
