@@ -1,0 +1,1 @@
+ insect.add_to(self)
