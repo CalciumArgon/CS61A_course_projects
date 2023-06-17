@@ -1,0 +1,15 @@
+# default ignore
+*.ok
+.c_bin
+.classes
+logs
+*.log
+node_modules
+dist
+dist-ssr
+*.local
+*.bak
+*.dat
+*.dir
+ok
+*.ok_history
