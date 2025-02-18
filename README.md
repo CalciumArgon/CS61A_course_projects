@@ -1,6 +1,6 @@
 # CS 61A Spring 2021
 
-## What this repository does
+<!--## What this repository does
 ```
 This is a recording for my self-learning of CS61A
 Hoping this to be a motivator, as my poor willpower distract me several times from systematically learning this course
@@ -10,7 +10,7 @@ Hoping this to be a motivator, as my poor willpower distract me several times fr
 Having Finished most of the labs/homework/projects
 I decide to close this note project
 --2023.6.18--
-```
+```-->
 
 ## Source
 【Course website with all the learning material】
